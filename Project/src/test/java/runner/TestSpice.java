@@ -23,7 +23,8 @@ public class TestSpice {
         driver = new EventFiringDecorator<>(listener).decorate(driver);
 
         driver.get("https://www.globalsqa.com/");
-        driver.
+        
+        
         
     }
 
