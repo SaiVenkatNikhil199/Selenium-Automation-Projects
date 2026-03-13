@@ -35,7 +35,13 @@ public class TestSpice {
         try{
             WebElement fullName = driver.findElement(By.xpath("//input[@placeholder='First Name']"));
             fullName.click(); 
-            fullName.sendKeys("John"); 
+            fullName.sendKeys("John");
+            
+            WebElement lastName = driver.findElement(By.xpath("//input[@placeholder='Last Name']"));
+            lastName.click();
+            lastName.sendKeys("Sam");
+
+            
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
