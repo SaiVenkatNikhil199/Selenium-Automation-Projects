@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
@@ -34,28 +35,17 @@ public class TestSpice {
     @Test
     public void testMethod(){
         try{
-            WebElement fullName = driver.findElement(By.xpath("//input[@placeholder='First Name']"));
-            fullName.click(); 
-            fullName.sendKeys("John");
-            
-            WebElement lastName = driver.findElement(By.xpath("//input[@placeholder='Last Name']"));
-            lastName.click();
-            lastName.sendKeys("Sam");
+            WebElement year = driver.findElement(By.xpath("//select[@id='yearbox']"));
+            Select yearDropdown = new Select(year);
+            yearDropdown.selectByVisibleText("2015");
 
-            WebElement email = driver.findElement(By.xpath("//input[@type='email']"));
-            email.click();
-            email.sendKeys("John@example.com");
+            WebElement month = driver.findElement(By.xpath("//select[@ng-model=\"monthbox\"]"));
+            Select monthDropdown = new Select(month);
+            monthDropdown.selectByVisibleText("May");
 
-            WebElement mobile = driver.findElement(By.xpath("//input[@type='tel']"));
-            mobile.click();
-            mobile.sendKeys("9876543210");
-
-            List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@type='checkbox']"));
-            for(int i = 0;i<checkboxes.size();i++) {
-                checkboxes.get(i).click();
-                Thread.sleep(1000);
-            }
-
+            WebElement day = driver.findElement(By.xpath("//select[@id='daybox']"));
+            Select dayDropdown = new Select(month);
+            dayDropdown.selectByVisibleText("1");
 
         }catch(Exception e){
             System.out.println(e.getMessage());
