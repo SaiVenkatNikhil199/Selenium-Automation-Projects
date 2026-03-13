@@ -26,7 +26,7 @@ public class TestSpice {
         WebDriverListener listener = new EventHandler();
         driver = new EventFiringDecorator<>(listener).decorate(driver);
         driver.manage().window().maximize();
-        driver.get("https://www.globalsqa.com/");
+        driver.get("https://demo.automationtesting.in/Register.html");
         
     }
 
@@ -34,28 +34,6 @@ public class TestSpice {
     public void testMethod(){
         try{
             
-            WebElement contactUs = driver.findElement(By.xpath("(//a[text()='Contact Us'])[1]"));
-            contactUs.click();
-            Thread.sleep(2000);
-            // // After clicking the contact us , work on the form
-            WebElement name = driver.findElement(By.xpath("//input[@id='comment_name']"));
-            name.click();
-            name.sendKeys("John");
-    
-            WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
-            email.click();
-            email.sendKeys("John@example.com");
-    
-            WebElement subject = driver.findElement(By.xpath("//input[@id='subject']"));
-            subject.click();
-            subject.sendKeys("Refund");
-    
-            WebElement message = driver.findElement(By.xpath("//textarea[@id='comment']"));
-            message.click();
-            message.sendKeys("This is a sample message");
-    
-            WebElement sendButton = driver.findElement(By.xpath("//input[@id='submit']"));
-            sendButton.click();
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
