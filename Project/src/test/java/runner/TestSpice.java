@@ -44,7 +44,16 @@ public class TestSpice {
         email.click();
         email.sendKeys("John@example.com");
 
-        WebElement subject = driver.findElement(By.xpath(""));
+        WebElement subject = driver.findElement(By.xpath("//input[@id='subject']"));
+        subject.click();
+        subject.sendKeys("Refund");
+
+        WebElement message = driver.findElement(By.xpath("//textarea[@id='comment']"));
+        message.click();
+        message.sendKeys("This is a sample message");
+
+        WebElement sendButton = driver.findElement(By.xpath("//input[@id='submit']"));
+        sendButton.click();
     }
 
 
