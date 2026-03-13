@@ -53,6 +53,7 @@ public class TestSpice {
             List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@type='checkbox']"));
             for(int i = 0;i<checkboxes.size();i++) {
                 checkboxes.get(i).click();
+                Thread.sleep(1000);
             }
 
 
