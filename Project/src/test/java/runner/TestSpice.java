@@ -40,7 +40,8 @@ public class TestSpice {
         name.click();
         name.sendKeys("John");
 
-        WebElement email = driver.findElement(By.xpath(""));
+        WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
+        email.click();
     }
 
 
