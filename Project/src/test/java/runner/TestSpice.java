@@ -33,7 +33,9 @@ public class TestSpice {
     @Test
     public void testMethod(){
         try{
-            
+            WebElement fullName = driver.findElement(By.xpath("//input[@placeholder='First Name']"));
+            fullName.click(); 
+            fullName.sendKeys("John"); 
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
