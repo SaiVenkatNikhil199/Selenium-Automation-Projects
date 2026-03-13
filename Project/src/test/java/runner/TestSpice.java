@@ -35,7 +35,13 @@ public class TestSpice {
     @Test
     public void testMethod(){
         try{
-            
+            WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
+            email.click();
+            email.sendKeys("qa_testers@qabrains.com");
+
+            WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
+            password.click();
+            password.sendKeys("qa_testers@qabrains.com");
 
         }catch(Exception e){
             System.out.println(e.getMessage());
