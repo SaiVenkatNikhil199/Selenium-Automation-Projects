@@ -2,12 +2,15 @@ package runner;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import utils.EventHandler;
 
@@ -24,7 +27,11 @@ public class TestSpice {
 
         driver.get("https://www.globalsqa.com/");
         
-        
+    }
+
+    @Test
+    public void testMethod(){
+        driver.findElement(By.xpath("(//a[text()='Contact Us'])[1]"));
         
     }
 
