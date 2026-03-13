@@ -5,6 +5,7 @@ import java.net.URL;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
@@ -31,8 +32,11 @@ public class TestSpice {
 
     @Test
     public void testMethod(){
-        driver.findElement(By.xpath("(//a[text()='Contact Us'])[1]"));
+        WebElement contactUs = driver.findElement(By.xpath("(//a[text()='Contact Us'])[1]"));
+        contactUs.click();
         
+        // After clicking the contact us , work on the form
+        WebElement n
     }
 
 
