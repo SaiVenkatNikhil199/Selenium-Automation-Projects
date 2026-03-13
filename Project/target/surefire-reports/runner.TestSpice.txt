@@ -1,17 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: runner.TestSpice
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.678 s <<< FAILURE! - in runner.TestSpice
-testMethod(runner.TestSpice)  Time elapsed: 0.298 s  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: 
-element not interactable
-  (Session info: chrome=138.0.7204.157)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.113+', java.version: '17.0.17'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [bea0d3be473da104d16ccce4975a8dfe, clickElement {id=f.D1B6F2C7423C566E534C38FD377B224A.d.9E92EE8E7D15C19153FC15B48B172163.e.25}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.157, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45265}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://10.80.0.82:4444/sessio..., se:cdpVersion: 138.0.7204.157, se:containerName: abcdaacdabbaf329252015beeba..., se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://10.80.0.82:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://10.80.0.82:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on linux (bea0d3be473da104d16ccce4975a8dfe)] -> xpath: (//a[text()='Contact Us'])[1]]
-Session ID: bea0d3be473da104d16ccce4975a8dfe
-	at runner.TestSpice.testMethod(TestSpice.java:36)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.342 s - in runner.TestSpice

@@ -25,7 +25,7 @@ public class TestSpice {
         
         WebDriverListener listener = new EventHandler();
         driver = new EventFiringDecorator<>(listener).decorate(driver);
-
+        driver.manage().window().maximize();
         driver.get("https://www.globalsqa.com/");
         
     }
@@ -33,11 +33,11 @@ public class TestSpice {
     @Test
     public void testMethod(){
         try{
-
+            
             WebElement contactUs = driver.findElement(By.xpath("(//a[text()='Contact Us'])[1]"));
             contactUs.click();
             Thread.sleep(2000);
-            // After clicking the contact us , work on the form
+            // // After clicking the contact us , work on the form
             WebElement name = driver.findElement(By.xpath("//input[@id='comment_name']"));
             name.click();
             name.sendKeys("John");
