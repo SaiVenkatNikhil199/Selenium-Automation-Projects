@@ -36,7 +36,11 @@ public class TestSpice {
         contactUs.click();
         
         // After clicking the contact us , work on the form
-        WebElement n
+        WebElement name = driver.findElement(By.xpath("//input[@id='comment_name']"));
+        name.click();
+        name.sendKeys("John");
+
+        WebElement email = driver.findElement(By.xpath(""));
     }
 
 
