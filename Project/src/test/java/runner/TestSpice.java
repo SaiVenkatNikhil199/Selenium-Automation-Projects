@@ -35,17 +35,7 @@ public class TestSpice {
     @Test
     public void testMethod(){
         try{
-            WebElement year = driver.findElement(By.xpath("//select[@id='yearbox']"));
-            Select yearDropdown = new Select(year);
-            yearDropdown.selectByVisibleText("2015");
-
-            WebElement month = driver.findElement(By.xpath("//select[@ng-model=\"monthbox\"]"));
-            Select monthDropdown = new Select(month);
-            monthDropdown.selectByVisibleText("May");
-
-            WebElement day = driver.findElement(By.xpath("//select[@id='daybox']"));
-            Select dayDropdown = new Select(month);
-            dayDropdown.selectByVisibleText("1");
+            
 
         }catch(Exception e){
             System.out.println(e.getMessage());
