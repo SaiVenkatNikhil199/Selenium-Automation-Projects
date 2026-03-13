@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import utils.EventHandler;
 import java.lang.Thread;
+
 public class TestSpice {
     public static WebDriver driver;
     
@@ -29,7 +30,8 @@ public class TestSpice {
             driver = new EventFiringDecorator<>(listener).decorate(driver);
             driver.manage().window().maximize();
     
-            driver.get("https://www.thesouledstore.com/men");   
+            driver.get("https://www.ixigo.com/");   
+            Thread.sleep(1000);
 
         } catch (Exception e) {
             // TODO: handle exception
@@ -40,19 +42,40 @@ public class TestSpice {
     @Test
     public void testMethod1(){
         try {
+            // to destination
+            WebElement fromLocation = driver.findElement(By.xpath("//span[text()='From']"));
+            fromLocation.click();
             Thread.sleep(1000);
-            WebElement elem = driver.findElement(By.cssSelector("input[id='search']"));
-            elem.click();
-            elem.sendKeys("Shoes",Keys.ENTER);
-            Thread.sleep(3000);
-            WebElement productOne = driver.findElement(By.xpath("(//div[contains(@class,'productlist')])[1]"));
-            productOne.click();
-            Thread.sleep(4000);
-            WebElement wishList = driver.findElement(By.xpath("//span[text()='Add to Wishlist']"));
-            wishList.click();
-            Thread.sleep(4000);
+            WebElement fromInputBar = driver.findElement(By.xpath("//label[text()='From']/following-sibling::input"));
+            fromInputBar.sendKeys("DEL");
+            
+            Thread.sleep(1000);
+            WebElement delhiLocation = driver.findElement(By.xpath("(//div[@role='listitem'])[4]"));
+            delhiLocation.click();
+            
+            Thread.sleep(1000);
+            // from destination
+            // WebElement toDestination = driver.findElement(By.xpath("p[data-testid='destinationId']"));
+            // toDestination.click();
+            
+            Thread.sleep(1000);
+            WebElement toInputBar = driver.findElement(By.xpath("//label[text()='To']/following-sibling::input"));
+            // toInputBar.click();
+            toInputBar.sendKeys("BOM");
+            Thread.sleep(1000);
+
+            // mumbai location
+            WebElement bombayLocation = driver.findElement(By.xpath("(//p[contains(text(),'Shivaji')])"));
+            bombayLocation.click();
+            Thread.sleep(1000);
+            
+            WebElement searchButton = driver.findElement(By.xpath("//button[text()='Search']"));
+            searchButton.click();
+            Thread.sleep(1000);
+            
         } catch (Exception e) {
             // TODO: handle exception
+            System.out.println(e.getMessage());
         }
     }
 
