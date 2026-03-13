@@ -28,7 +28,7 @@ public class TestSpice {
         WebDriverListener listener = new EventHandler();
         driver = new EventFiringDecorator<>(listener).decorate(driver);
         driver.manage().window().maximize();
-        driver.get("https://demo.automationtesting.in/Register.html");
+        driver.get("https://practice.qabrains.com/");
         
     }
 
