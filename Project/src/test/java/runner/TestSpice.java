@@ -2,6 +2,7 @@ package runner;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -41,7 +42,20 @@ public class TestSpice {
             lastName.click();
             lastName.sendKeys("Sam");
 
-            
+            WebElement email = driver.findElement(By.xpath("//input[@type='email']"));
+            email.click();
+            email.sendKeys("John@example.com");
+
+            WebElement mobile = driver.findElement(By.xpath("//input[@type='tel']"));
+            mobile.click();
+            mobile.sendKeys("9876543210");
+
+            List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@type='cjeckbox']"));
+            for(int i = 0;i<checkboxes.size();i++) {
+                checkboxes.get(i).click();
+            }
+
+
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
