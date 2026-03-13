@@ -50,7 +50,7 @@ public class TestSpice {
             mobile.click();
             mobile.sendKeys("9876543210");
 
-            List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@type='cjeckbox']"));
+            List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@type='checkbox']"));
             for(int i = 0;i<checkboxes.size();i++) {
                 checkboxes.get(i).click();
             }
