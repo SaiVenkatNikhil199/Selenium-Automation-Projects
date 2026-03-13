@@ -42,6 +42,10 @@ public class TestSpice {
             WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
             password.click();
             password.sendKeys("qa_testers@qabrains.com");
+            
+            WebElement button = driver.findElement(By.xpath("//button[@type='submit']"));
+            button.click();
+
 
         }catch(Exception e){
             System.out.println(e.getMessage());
