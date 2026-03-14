@@ -36,6 +36,7 @@ public class TestSpice {
     @Test
     public void testMethod(){
         try{
+            Thread.sleep(2000);
             WebElement username = driver.findElement(By.xpath("//input[@id='user-name']"));
             username.click();
             username.sendKeys("standard_user");
@@ -45,7 +46,8 @@ public class TestSpice {
             password.sendKeys("secret_sauce");
 
             WebElement login = driver.findElement(By.xpath("//input[@id='login-button']"));
-            
+            login.click();
+            Thread.sleep(2000);
 
 
         }catch(Exception e){
