@@ -35,18 +35,18 @@ public class TestSpice {
     @Test
     public void testMethod(){
         try{
+            Thread.sleep(10000);
             driver.findElement(By.xpath("//a[text()='Practice Site']")).click();
-            
-            WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
-            email.click();
-            email.sendKeys("qa_testers@qabrains.com");
+            // WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
+            // email.click();
+            // email.sendKeys("qa_testers@qabrains.com");
 
-            WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
-            password.click();
-            password.sendKeys("qa_testers@qabrains.com");
+            // WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
+            // password.click();
+            // password.sendKeys("qa_testers@qabrains.com");
             
-            WebElement button = driver.findElement(By.xpath("//button[@type='submit']"));
-            button.click();
+            // WebElement button = driver.findElement(By.xpath("//button[@type='submit']"));
+            // button.click();
 
 
         }catch(Exception e){
