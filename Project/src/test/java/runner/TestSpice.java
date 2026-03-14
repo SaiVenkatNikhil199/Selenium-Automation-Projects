@@ -56,11 +56,12 @@ public class TestSpice {
             String currentWindow = driver.getWindowHandle();
 
             for(String window : windows) {
-                if(!window.equals(current)) {
+                if(!window.equals(currentWindow)) {
                     driver.switchTo().window(window);
                 }   
             }
-            
+
+
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
