@@ -3,6 +3,7 @@ package runner;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -51,7 +52,14 @@ public class TestSpice {
             WebElement newTab = driver.findElement(By.xpath("//button[text()='New Tab']"));
             newTab.click();
 
-            
+            Set<String> windows = driver.getWindowHandles();
+            String currentWindow = driver.getWindowHandle();
+
+            for(int i = 0;i<windows.size();i++) {
+                if(currentWindow != windows.get(i)){
+                    
+                }
+            }
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
