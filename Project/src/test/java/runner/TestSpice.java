@@ -60,6 +60,7 @@ public class TestSpice {
                     driver.switchTo().window(window);
                 }   
             }
+            
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
