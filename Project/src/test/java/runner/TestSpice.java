@@ -39,8 +39,13 @@ public class TestSpice {
         try{
             
             WebElement simpleAlert = driver.findElement(By.xpath("//button[@id='alertBtn']"));
-            Alert alert = driver.switchTo().alert(simpleAlert);
+            simpleAlert.click();
+            Alert alert = driver.switchTo().alert();
+            alert.accept();
            
+            WebElement confirmAlert = driver.findElement(By.xpath("//button[@id='confirmBtn']"));
+            confirmAlert.click();
+            
 
 
         }catch(Exception e){
