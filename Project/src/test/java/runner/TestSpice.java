@@ -35,6 +35,8 @@ public class TestSpice {
     @Test
     public void testMethod(){
         try{
+            driver.findElement(By.xpath("//a[text()='Practice Site']")).click();
+            
             WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
             email.click();
             email.sendKeys("qa_testers@qabrains.com");
