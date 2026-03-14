@@ -47,8 +47,11 @@ public class TestSpice {
             confirmAlert.click();
             Alert alert2 = driver.switchTo().alert();
             alert2.dismiss();
-          
 
+            WebElement newTab = driver.findElement(By.xpath("//button[text()='New Tab']"));
+            newTab.click();
+
+            
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
