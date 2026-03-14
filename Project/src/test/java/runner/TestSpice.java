@@ -42,11 +42,12 @@ public class TestSpice {
             simpleAlert.click();
             Alert alert = driver.switchTo().alert();
             alert.accept();
-           
+            
             WebElement confirmAlert = driver.findElement(By.xpath("//button[@id='confirmBtn']"));
             confirmAlert.click();
-            
-
+            Alert alert2 = driver.switchTo().alert();
+            alert2.dismiss();
+          
 
         }catch(Exception e){
             System.out.println(e.getMessage());
