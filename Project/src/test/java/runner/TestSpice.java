@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +30,7 @@ public class TestSpice {
         WebDriverListener listener = new EventHandler();
         driver = new EventFiringDecorator<>(listener).decorate(driver);
         driver.manage().window().maximize();
-        driver.get("https://www.saucedemo.com/");
+        driver.get("https://testautomationpractice.blogspot.com/");
         
     }
 
@@ -37,16 +38,8 @@ public class TestSpice {
     public void testMethod(){
         try{
             
-            WebElement username = driver.findElement(By.xpath("//input[@id='user-name']"));
-            username.click();
-            username.sendKeys("standard_user");
-
-            WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
-            password.click();
-            password.sendKeys("secret_sauce");
-
-            WebElement login = driver.findElement(By.xpath("//input[@id='login-button']"));
-            login.click();
+            WebElement simpleAlert = driver.findElement(By.xpath("//button[@id='alertBtn']"));
+            Alert alert = driver.switchTo().alert(simpleAlert);
            
 
 
