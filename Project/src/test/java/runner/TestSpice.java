@@ -55,10 +55,8 @@ public class TestSpice {
             Set<String> windows = driver.getWindowHandles();
             String currentWindow = driver.getWindowHandle();
 
-            for(int i = 0;i<windows.size();i++) {
-                if(currentWindow != windows.get(i)){
-                    
-                }
+            for(String window : windows) {
+                
             }
         }catch(Exception e){
             System.out.println(e.getMessage());
