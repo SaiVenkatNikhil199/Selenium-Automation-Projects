@@ -35,8 +35,8 @@ public class TestSpice {
     @Test
     public void testMethod(){
         try{
-            Thread.sleep(10000);
-            driver.findElement(By.xpath("//a[text()='Practice Site']")).click();
+            Thread.sleep(5000);
+            driver.findElement(By.xpath("//span[text()='Start Testing Now']")).click();
             // WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
             // email.click();
             // email.sendKeys("qa_testers@qabrains.com");
