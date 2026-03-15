@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-15T15:34:27 UTC" name="Surefire suite" finished-at="2026-03-15T15:34:44 UTC" duration-ms="17498">
+  <suite started-at="2026-03-15T15:39:21 UTC" name="Surefire suite" finished-at="2026-03-15T15:39:43 UTC" duration-ms="22097">
     <groups>
     </groups>
-    <test started-at="2026-03-15T15:34:27 UTC" name="Surefire test" finished-at="2026-03-15T15:34:44 UTC" duration-ms="17498">
+    <test started-at="2026-03-15T15:39:21 UTC" name="Surefire test" finished-at="2026-03-15T15:39:43 UTC" duration-ms="22097">
       <class name="runner.TestSpice">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:runner.TestSpice@419c5f1a]" started-at="2026-03-15T15:34:27 UTC" name="openBrowser" finished-at="2026-03-15T15:34:40 UTC" duration-ms="13713" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:runner.TestSpice@419c5f1a]" started-at="2026-03-15T15:39:21 UTC" name="openBrowser" finished-at="2026-03-15T15:39:34 UTC" duration-ms="12716" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="testMethod()[pri:0, instance:runner.TestSpice@419c5f1a]" started-at="2026-03-15T15:34:40 UTC" name="testMethod" finished-at="2026-03-15T15:34:44 UTC" duration-ms="3591" status="PASS">
+        <test-method signature="testMethod()[pri:0, instance:runner.TestSpice@419c5f1a]" started-at="2026-03-15T15:39:34 UTC" name="testMethod" finished-at="2026-03-15T15:39:43 UTC" duration-ms="9228" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMethod -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:runner.TestSpice@419c5f1a]" started-at="2026-03-15T15:34:44 UTC" name="closeBrowser" finished-at="2026-03-15T15:34:44 UTC" duration-ms="117" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:runner.TestSpice@419c5f1a]" started-at="2026-03-15T15:39:43 UTC" name="closeBrowser" finished-at="2026-03-15T15:39:43 UTC" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
