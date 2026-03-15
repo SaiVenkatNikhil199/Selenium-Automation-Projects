@@ -44,11 +44,14 @@ public class TestSpice {
 
             WebElement monday = driver.findElement(By.xpath("//input[@id='monday']"));
             monday.click();
+            
+            Thread.sleep(1000);
 
-            WebElement country = driver.findElement(By.xpath("//selct[@id='country']"));
+            WebElement country = driver.findElement(By.xpath("//select[@id='country']"));
             Select dropdown = new Select(country);
             dropdown.selectByVisibleText("France");
-            
+
+            Thread.sleep(1000);
 
         }catch(Exception e){
             System.out.println(e.getMessage());
