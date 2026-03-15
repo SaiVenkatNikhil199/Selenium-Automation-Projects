@@ -39,10 +39,10 @@ public class TestSpice {
     public void testMethod(){
         try{
             
-            WebElement maleRadio = driver.findElement(By.xpath("//input[@type='radio' and @id='male']"));
+            WebElement maleRadio = driver.findElement(By.xpath("//label[text()='Male']"));
             maleRadio.click();
 
-            WebElement monday = driver.findElement(By.xpath("//input[@id='monday']"));
+            WebElement monday = driver.findElement(By.xpath("//label[text()='Monday']"));
             monday.click();
             
             Thread.sleep(1000);
