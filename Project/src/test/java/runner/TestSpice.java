@@ -46,7 +46,10 @@ public class TestSpice {
             Select colorsDropdown = new Select(colors);
             colorsDropdown.selectByVisibleText(("Green"));
 
-            WebElement animals = driver.findElement(By.xpath(""));
+            WebElement animals = driver.findElement(By.xpath("//select[@id='animals']"));
+            Select animalsDropdown = new Select(animals);
+            animalsDropdown.selectByVisibleText("Giraffe");
+            
 
         }catch(Exception e){
             System.out.println(e.getMessage());
