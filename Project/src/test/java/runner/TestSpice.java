@@ -39,8 +39,17 @@ public class TestSpice {
     public void testMethod(){
         try{
             
+            WebElement maleRadio = driver.findElement(By.xpath("//input[@type='radio' and @id='male']"));
+            maleRadio.click();
+
+            WebElement monday = driver.findElement(By.xpath("//input[@id='monday']"));
+            monday.click();
+
             WebElement country = driver.findElement(By.xpath("//selct[@id='country']"));
             Select dropdown = new Select(country);
+            dropdown.selectByVisibleText("France");
+
+
             
 
         }catch(Exception e){
