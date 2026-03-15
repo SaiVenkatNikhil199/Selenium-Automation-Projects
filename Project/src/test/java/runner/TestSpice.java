@@ -55,7 +55,12 @@ public class TestSpice {
             WebElement forgotPassword = driver.findElement(By.xpath("//span[text()='Forgot Password']"));
             forgotPassword.click();
 
-            
+            WebElement emailField = driver.findElement(By.xpath("//input[@id='email']"));
+            emailField.click();
+            emailField.sendKeys("John@example.com");
+
+            WebElement resetButton = driver.findElement(By.xpath("//button[text()='Reset Password']"));
+            resetButton.click();
             
 
 
