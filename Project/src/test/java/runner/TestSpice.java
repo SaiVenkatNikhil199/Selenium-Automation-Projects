@@ -39,27 +39,9 @@ public class TestSpice {
     public void testMethod(){
         try{
             
-            WebElement simpleAlert = driver.findElement(By.xpath("//button[@id='alertBtn']"));
-            simpleAlert.click();
-            Alert alert = driver.switchTo().alert();
-            alert.accept();
+            WebElement simpleAlert = driver.findElement(By.xpath("//selct[@id='country']"));
+            Select dropdown = new Selec
             
-            WebElement confirmAlert = driver.findElement(By.xpath("//button[@id='confirmBtn']"));
-            confirmAlert.click();
-            Alert alert2 = driver.switchTo().alert();
-            alert2.dismiss();
-
-            WebElement newTab = driver.findElement(By.xpath("//button[text()='New Tab']"));
-            newTab.click();
-
-            Set<String> windows = driver.getWindowHandles();
-            String currentWindow = driver.getWindowHandle();
-
-            for(String window : windows) {
-                if(!window.equals(currentWindow)) {
-                    driver.switchTo().window(window);
-                }   
-            }
 
         }catch(Exception e){
             System.out.println(e.getMessage());
