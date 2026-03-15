@@ -39,7 +39,14 @@ public class TestSpice {
     public void testMethod(){
         try{
             
-            
+            WebElement wednesday = driver.findElement(By.xpath("//label[text()='Wednesday']"));
+            wednesday.click();
+
+            WebElement colors = driver.findElement(By.xpath("//select[@id='colors']"));
+            Select colorsDropdown = new Select(colors);
+            colorsDropdown.selectByVisibleText(("Green"));
+
+            WebElement animals = driver.findElement(By.xpath(""));
 
         }catch(Exception e){
             System.out.println(e.getMessage());
