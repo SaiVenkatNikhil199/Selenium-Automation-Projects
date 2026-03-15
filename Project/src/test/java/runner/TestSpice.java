@@ -39,8 +39,8 @@ public class TestSpice {
     public void testMethod(){
         try{
             
-            WebElement simpleAlert = driver.findElement(By.xpath("//selct[@id='country']"));
-            Select dropdown = new Selec
+            WebElement country = driver.findElement(By.xpath("//selct[@id='country']"));
+            Select dropdown = new Select(country);
             
 
         }catch(Exception e){
