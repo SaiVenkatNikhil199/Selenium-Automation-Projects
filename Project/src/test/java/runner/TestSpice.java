@@ -48,8 +48,6 @@ public class TestSpice {
             WebElement country = driver.findElement(By.xpath("//selct[@id='country']"));
             Select dropdown = new Select(country);
             dropdown.selectByVisibleText("France");
-
-
             
 
         }catch(Exception e){
