@@ -39,17 +39,25 @@ public class TestSpice {
     public void testMethod(){
         try{
             
-            WebElement wednesday = driver.findElement(By.xpath("//label[text()='Wednesday']"));
-            wednesday.click();
+            WebElement startTestingButton = driver.findElement(By.xpath("//span[text()='Start Testing Now']"));
+            startTestingButton.click();
 
-            WebElement colors = driver.findElement(By.xpath("//select[@id='colors']"));
-            Select colorsDropdown = new Select(colors);
-            colorsDropdown.selectByVisibleText(("Green"));
+            Set<String> windows = driver.getWindowHandles();
+            String currentWindow = driver.getWindowHandle();
 
-            WebElement animals = driver.findElement(By.xpath("//select[@id='animals']"));
-            Select animalsDropdown = new Select(animals);
-            animalsDropdown.selectByVisibleText("Giraffe");
+            for(String window : windows){
+                if(!window.equals(currentWindow)) {
+                    driver.switchTo().window(window);
+                    break;
+                }
+            }
+
+            WebElement forgotPassword = driver.findElement(By.xpath("//span[text()='Forgot Password']"));
+            forgotPassword.click();
+
             
+            
+
 
         }catch(Exception e){
             System.out.println(e.getMessage());
