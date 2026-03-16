@@ -2,19 +2,14 @@ package runner;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
-import java.util.Set;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
@@ -31,7 +26,7 @@ public class TestSpice {
         WebDriverListener listener = new EventHandler();
         driver = new EventFiringDecorator<>(listener).decorate(driver);
         driver.manage().window().maximize();
-        driver.get("https://qabrains.com/practice-site");
+        driver.get("https://www.globalsqa.com/");
         
     }
 
@@ -39,33 +34,28 @@ public class TestSpice {
     public void testMethod(){
         try{
             
-            WebElement startTestingButton = driver.findElement(By.xpath("//span[text()='Start Testing Now']"));
-            startTestingButton.click();
-
-            Set<String> windows = driver.getWindowHandles();
-            String currentWindow = driver.getWindowHandle();
-
-            for(String window : windows){
-                if(!window.equals(currentWindow)) {
-                    driver.switchTo().window(window);
-                    break;
-                }
-            }
-            Thread.sleep(5000);
-            WebElement forgotPassword = driver.findElement(By.xpath("//span[text()='Forgot Password']"));
-            forgotPassword.click();
+            WebElement contactUs = driver.findElement(By.xpath("(//a[text()='Contact Us'])[1]"));
+            contactUs.click();
             Thread.sleep(2000);
-            
-            // Thread.sleep(2000);
-            WebElement emailField = driver.findElement(By.xpath("//input[@id='email']"));
-            emailField.click();
-            emailField.sendKeys("John@example.com");
-            
-            Thread.sleep(2000);
-            WebElement resetButton = driver.findElement(By.xpath("//button[text()='Reset Password']"));
-            resetButton.click();
-            
-
+            // // After clicking the contact us , work on the form
+            WebElement name = driver.findElement(By.xpath("//input[@id='comment_name']"));
+            name.click();
+            name.sendKeys("John");
+    
+            WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
+            email.click();
+            email.sendKeys("John@example.com");
+    
+            WebElement subject = driver.findElement(By.xpath("//input[@id='subject']"));
+            subject.click();
+            subject.sendKeys("Refund");
+    
+            WebElement message = driver.findElement(By.xpath("//textarea[@id='comment']"));
+            message.click();
+            message.sendKeys("This is a sample message");
+    
+            WebElement sendButton = driver.findElement(By.xpath("//input[@id='submit']"));
+            sendButton.click();
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
